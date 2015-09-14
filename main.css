@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Begin font faces */
+@font-face {
+    font-family: 'Code Pro Demo';
+	src: url(fonts/Code_Pro_Demo-webfont.otf);
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url(fonts/BebasNeue-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url(fonts/Aller_Rg.ttf);
+}
+
+/* Begin hidden */
+.hidden {
+    display: none;
+}
+
+/* Begin header */
+#headerBox {
+    height: auto;
+    width: 1300px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Code Pro Demo';
+    overflow: hidden;
+    border-bottom: solid 2px black;
+}
+
+#headerBox img {
+    float: left;
+    width: 100%;
+    height: 100%;
+    max-width: 358px;
+    max-height: 76px;
+}
+
+#headerBox ul {
+    max-width: 100%;
+    text-align: center;
+    float: right;
+    margin-right: 6.17%;
+    margin-top: 50px;
+    cursor: default;
+}
+
+#headerBox li {
+    display: inline;
+}
+
+#headerBox a {
+    padding: 15px 15px 9px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+#headerBox a:hover {
+    background-color: grey;
+}
+
+#headerBox a:active {
+    background-color: #4449BF;   
+}
+
+/* Begin media queries */
+
+/* Makes headerBox and contentContainer resize when window is less than 1000px */
+@media (max-width: 1000px) {
+    #headerBox img {
+        margin-right: auto;
+        margin-left: auto;
+        float: none;   
+    }
+    
+    #headerBox ul {
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+    }
+    
+    #headerBox a {
+        padding: 10px 10px 0px 10px;   
+    }
+    
+    #pictureContainer {
+        display: none;
+    }
+    
+    #contentContainer #informationContainer {
+        min-width: 95%;
+        height: 600px;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Makes navigation buttons resize when window is less than 400px wide */
+@media (max-width: 400px) {
+    #headerBox a {
+        font-size: 15px;
+        padding: 4px 4px 2px 4px;
+    }
+}
+
+/* Begin contentContainer */
+#contentContainer {
+    width: 1300px;
+    max-width: 90%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Begin pictureContainer */
+#pictureContainer {
+    width: 48%;
+    max-width: 100%;
+    height: 600px;
+    float: left;
+    margin-top: 10px;
+}
+
+#pictureContainer img {
+    border-radius: 234px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Begin informationContainer */
+#informationContainer {
+    width: 48%;
+    padding: 10px;
+    max-width: 100%;
+    min-height: 600px;
+    float: right;
+    margin-top: 10px;
+    background-color: #F6F6F6;
+}
+
+#informationContainer .header {
+    font-family: 'Bebas';
+    font-size: 60px;
+}
+
+#informationContainer .body {
+    font-family: 'Aller';
+    font-size: 18px;
+}
+
+#informationContainer ul {
+    list-style-type: none;
+}
+
+#informationContainer .listHeader {
+    font-family: 'Bebas';
+    font-size: 30px;
+}
+
+#informationContainer .listBody {
+    font-size: 18px;
+    font-family: 'Aller';
+}
+
+#informationContainer a:visited {
+    color: #4449BF; 
+}

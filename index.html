@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nick Martini</title>
+
+    <!--Favicon-->
+    <link rel="icon" 
+      type="image/ico" 
+      href="images/martinifavicon.ico" />
+
+    <!--Compatibility with mobile devices-->
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	
+	<!--Linking CSS stylesheet-->
+    <link rel = "stylesheet" type = "text/css" href = "main.css">
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready( function() {
+
+            //  Changing fade in/out properties //
+            //  depending on window size        //
+
+            /* If browser is > 1000px, fade in/out */
+            if($(window).width() > 1000) {
+                $("#headerBox img").fadeIn(1700);
+                $("#headerBox ul").delay(1000).fadeIn(1700);
+                $("#contentContainer").delay(2000).fadeIn(1700);
+            }
+            /* Otherwise, remove the .hidden class */
+            else {
+                $("#headerBox img").removeClass("hidden");
+                $("#headerBox ul").removeClass("hidden");
+                $("#contentContainer").removeClass("hidden");
+            }
+        
+            //  Fading in/out each tab and  //
+            //  loading its content         //
+
+            var activeWindow = "blah";
+
+            $("#headerBox a").click(function() {
+                var idName = $(this).attr('id');
+
+                switch (idName) {
+                    case 'about':
+                        if (activeWindow == idName)
+                            break;
+                        activeWindow = idName;
+
+                        $("#information").fadeOut(500);
+                        setTimeout(function() {
+                            $("#information").load("text/about.txt");
+                        }, 500);
+                        $("#information").delay(100).fadeIn(500);
+                        break;
+
+                    case 'projects':
+                        if (activeWindow == idName)
+                            break;
+                        activeWindow = idName;
+
+                        $("#information").fadeOut(500);
+                        setTimeout(function() {
+                            $("#information").load("text/projects.txt");
+                        }, 500);
+                        $("#information").delay(100).fadeIn(500);
+                        break;
+
+                    case 'experience':
+                        if (activeWindow == idName)
+                            break;                       
+                        activeWindow = idName;
+
+                        $("#information").fadeOut(500);
+                        setTimeout(function() {
+                            $("#information").load("text/experience.txt");
+                        }, 500);
+                        $("#information").delay(100).fadeIn(500);
+                        break;
+
+                    case 'contact':
+                        if (activeWindow == idName)
+                            break;                        
+                        activeWindow = idName;
+
+                        $("#information").fadeOut(500);
+                        setTimeout(function() {
+                            $("#information").load("text/" + idName + ".txt");
+                        }, 500);
+                        $("#information").delay(200).fadeIn(500);
+                        break;
+
+                    default:
+                        break;
+                }
+            });           
+        }); 
+    </script>
+</head>
+<body>
+    
+    <!--Begin header-->
+    <div id = "headerBox">
+        <img src = "images/personal_logo.png" class = "hidden" alt = "" draggable = "false">
+        <ul class = "hidden">
+            <li><a href = "#" id = "about">About</a></li>
+            <li><a href = "#" id = "projects">Projects</a></li>
+            <li><a href = "#" id = "experience">Experience</a></li>
+            <li><a href = "#" id = "contact">Contact</a></li>
+        </ul>
+    </div>
+
+    
+    <!--Begin contentContainer-->
+    <div id = "contentContainer" class = "hidden">
+            
+        <!--Begin picture slideshow-->
+        <div id = "pictureContainer">
+            <img src = "images/profile.png" alt = "" draggable = "false">
+        </div>
+        
+        <!--Begin content-->
+        <div id = "informationContainer">
+            <div id = "information">
+                <p class = "header">Welcome</p>
+                <p class = "body">By clicking the above tabs, this window will dynamically load different sections of my website.</p>
+            </div>
+
+        </div>
+        
+    </div>
+    
+</body>
+</html>

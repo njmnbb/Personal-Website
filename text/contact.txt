@@ -1,0 +1,4 @@
+<p class = "header">Contact Me</p>
+<p class = "body">If you are interested in contacting me, please feel free to shoot me an email at <a href = "mailto:njmnbb@mail.missouri.edu?Subject=Business%20Inquiry" target="_top">njmnbb@mail.missouri.edu</a>. I will be sure to reply as quickly as I can.
+<br><br>
+If you would like to view my resume, click <a href = "downloads/Resume.pdf">this</a> link to do so.</p>

@@ -1,0 +1,9 @@
+<p class = "header">Experience</p>
+<p class = "body">
+Currently I have knowledge of all basic web languages, technologies, and syntaxes including HTML, CSS, JavaScript, jQuery, PHP, PostgreSQL, JSON, XML, and AJAX. I plan on learning other frameworks in the future such as Bootstrap and AngularJS to help me make my sites more efficient and easier to code.
+<br><br>
+I have taken two classes on web design so far: one class focused on the technologies used to create a website, while the other focused on database management using PostgreSQL. Both of these classes have been extremely interesting to me and have taught me valuable skills in this line of work.
+<br><br>
+In addition to these two classes, I will be taking two more web design classes during my fall 2015 school semester. One of these classes will be expanding on web technologies that I previously learned and the other will teach basic design principles in order to create professional looking websites.
+<br><br>
+As noted on the 'Projects' page of this site, I have created a few websites already. Both of these sites have given me a better understanding of what it takes to make a functional website. Even making this website has given me experience in managing and updating a domain and setting up a web hosting service. I plan on creating more websites in the future for fun as I truly do enjoy creating them and seeing what new techniques I can use.</p>
