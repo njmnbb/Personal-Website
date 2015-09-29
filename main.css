@@ -31,6 +31,7 @@
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 7px;
     font-family: 'Code Pro Demo';
     overflow: hidden;
     border-bottom: solid 2px black;
@@ -42,6 +43,7 @@
     height: 100%;
     max-width: 358px;
     max-height: 76px;
+    padding-top: 3px;
 }
 
 #headerBox ul {
@@ -58,7 +60,7 @@
 }
 
 #headerBox a {
-    padding: 15px 15px 9px 15px;
+    padding: 15px 15px 15px 15px;
     text-decoration: none;
     color: black;
     font-size: large;
@@ -94,7 +96,7 @@
     }
     
     #headerBox a {
-        padding: 10px 10px 0px 10px;   
+        padding: 10px 10px 5px 10px;   
     }
     
     #pictureContainer {
@@ -182,4 +184,28 @@
 
 #informationContainer a:visited {
     color: #4449BF; 
+}
+
+/*Begin 404 page*/
+.errorPage_container {
+    width: 75%;
+    margin: auto;
+    height: auto;
+    text-align: center;
+}
+
+.errorPage_title {
+    font-size: 130px;
+    font-family: 'Aller';
+    font-weight: bolder;
+}
+
+.errorPage_body {
+    font-size: 50px;
+    font-family: 'Aller';
+}
+
+.errorPage_image {
+    height: 100%;
+    width: 100%;
 }
