@@ -5,9 +5,9 @@ $(document).ready( function() {
 
     // If browser is > 1000px, fade in/out
     if($(window).width() > 1000) {
-        $("#headerBox img").fadeIn(1700);
-        $("#headerBox ul").delay(1000).fadeIn(1700);
-        $("#contentContainer").delay(2000).fadeIn(1700);
+        $("#headerBox img").addClass("hidden").fadeIn(1700);
+        $("#headerBox ul").addClass("hidden").delay(1000).fadeIn(1700);
+        $("#contentContainer").addClass("hidden").delay(2000).fadeIn(1700);
     }
     // Otherwise, remove the .hidden class
     else {
@@ -29,6 +29,12 @@ $(document).ready( function() {
 
         //If the clicked tab is already active, ignore this function
         if (activeWindow != tabName) {
+
+            //Remove the .active class from all tabs
+            $("#headerBox a").removeClass("active");
+
+            //Give the active tab the .active class for visual effect
+            $(this).addClass("active");
 
             //Change activeWindow to tabName for next tab click, then change the <title> appropriately
             activeWindow = tabName;

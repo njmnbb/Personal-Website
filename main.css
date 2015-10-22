@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Begin font faces */
@@ -70,8 +71,12 @@
     transition: background-color 0.3s;
 }
 
-#headerBox a:hover {
+.active {
     background-color: grey;
+}
+
+#headerBox a:not(.active):hover {
+    background-color: #C0C0C0;
 }
 
 #headerBox a:active {
