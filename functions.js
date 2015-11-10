@@ -16,6 +16,12 @@ $(document).ready( function() {
         $("#contentContainer").removeClass("hidden");
     }
 
+    // $("#headerBox a").click(function() {
+    //     var tabName = $(this).attr('id');
+    //     $("#information").fadeOut(500);
+    //     $("#information").load("text/" + tabName + ".txt");
+
+    // });
     //  Fading in/out each tab and  //
     //  loading its content         //
 
@@ -45,7 +51,9 @@ $(document).ready( function() {
             setTimeout(function() {
                 $("#information").load("text/" + tabName + ".txt");
             }, 500);
-            $("#information").delay(200).fadeIn(500);
+            $(document).ajaxComplete(function() {
+                $("#information").fadeIn(500);
+            });
         }
     });           
 }); 
