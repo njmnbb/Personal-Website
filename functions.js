@@ -1,5 +1,4 @@
 $(document).ready( function() {
-
     //  Changing fade in/out properties //
     //  depending on window size        //
 
@@ -16,22 +15,16 @@ $(document).ready( function() {
         $("#contentContainer").removeClass("hidden");
     }
 
-    // $("#headerBox a").click(function() {
-    //     var tabName = $(this).attr('id');
-    //     $("#information").fadeOut(500);
-    //     $("#information").load("text/" + tabName + ".txt");
-
-    // });
-    //  Fading in/out each tab and  //
-    //  loading its content         //
-
     var activeWindow = "blah";
 
     //When a tab is clicked, this function runs
-    $("#headerBox a").click(function() {
+    $("#headerBox a").click(function(e) {
+
+        //Prevents default href behavior from reloading page
+        e.preventDefault();
 
         //Create a variable for the name of the clicked tab
-        var tabName = $(this).attr('id');
+        var tabName = $(this).attr('href').replace(/\.\w+$/, "");
 
         //If the clicked tab is already active, ignore this function
         if (activeWindow != tabName) {
@@ -49,11 +42,27 @@ $(document).ready( function() {
             //Fade out information, load new content, then fade back in
             $("#information").fadeOut(500);
             setTimeout(function() {
-                $("#information").load("text/" + tabName + ".txt");
+                $("#information").load(tabName + ".txt");
             }, 500);
             $(document).ajaxComplete(function() {
                 $("#information").fadeIn(500);
             });
+
+            //Adds the selected tab to the browser's history
+            history.pushState(null, null, tabName);
         }
-    });           
+    });
+
+    //Reloads appropriate content when using back/forward buttons
+    $(window).on("popstate", function(){
+        //Reload previous text file in the #information container
+        $("#information").load(location.pathname.replace("/", "") + ".txt");
+
+        //Change title of site to relfect the change
+        document.title = "Nick Martini";
+
+        //Change active tab to reflect the change
+        $("#headerBox a").removeClass("active");
+        $("#headerBox a[href = '" + location.pathname.replace("/", "") + ".txt" + "']").addClass("active");
+    });
 }); 

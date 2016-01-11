@@ -17,6 +17,16 @@
     <!--Linking jQuery and functions.js file-->
     <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src = "functions.js"></script>
+    <script type="text/javascript">
+        //Google Analytics
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-70886406-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 <body>
     
@@ -24,10 +34,10 @@
     <div id = "headerBox">
         <img src = "images/personal_logo.png" alt = "" draggable = "false">
         <ul>
-            <li><a href = "#" id = "about">About</a></li>
-            <li><a href = "#" id = "projects">Projects</a></li>
-            <li><a href = "#" id = "experience">Experience</a></li>
-            <li><a href = "#" id = "contact">Contact</a></li>
+            <li><a href = "about.txt">About</a></li>
+            <li><a href = "projects.txt">Projects</a></li>
+            <li><a href = "experience.txt">Experience</a></li>
+            <li><a href = "contact.txt">Contact</a></li>
         </ul>
     </div>
 
@@ -39,7 +49,7 @@
             <img src = "images/profile500.png" alt = "" draggable = "false">
         </div>
         
-        <!--Begin content-->
+        <!--Begin informationContainer-->
         <div id = "informationContainer">
             <div id = "information">
                 <p class = "header">Welcome</p>
